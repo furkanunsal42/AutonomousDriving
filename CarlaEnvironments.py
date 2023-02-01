@@ -164,7 +164,7 @@ class Vehicle:
     def __init__(self, carla_environment, vehicle_type="model3", autopilot=False, spawn_point=None):
         try:
             if type(spawn_point) == vector:
-                spawn_point = carla.Transform(spawn_point.x, spawn_point.y, spawn_point.z)
+                spawn_point = carla.Transform(carla.Location(x=spawn_point.x, y=spawn_point.y, z=spawn_point.z))
             elif type(spawn_point) == int:
                 spawn_point = carla_environment.get_map_spawnpoints()[spawn_point]
             elif spawn_point is None:

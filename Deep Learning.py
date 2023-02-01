@@ -252,7 +252,7 @@ class DQNAgent:
                 state = next_state
                 i += 1
                 if done:
-                    print("episode: {}/{}, score: {}, e: {:.2}".format(e, self.EPISODES, i, self.epsilon))
+                    print("episode: {}/{}, time: {}, e: {:.2}".format(e, self.EPISODES, i, self.epsilon))
                     print("Saving trained model as dqn.h5")
                     self.save("simple dqn.h5")
                     #return
